@@ -1,0 +1,12 @@
+@use './fluid-sizes'as *;
+
+@mixin focus($color: currentColor, $thickness: 2, $offset: 3) {
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: #{rem($thickness)} dashed $color;
+		outline-offset: #{rem($offset)};
+	}
+}

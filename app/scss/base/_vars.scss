@@ -1,0 +1,18 @@
+$white: #fff;
+$black: #000;
+
+// offsets
+$offset: 1.25rem;
+
+// width and height website | required
+$width-web: 1920; // обязательно без единицы измерения
+$width-min-web: 360; // обязательно без единицы измерения
+$height-web: 67.5rem;
+
+
+
+:root {
+	--container:  76.875rem;
+	--container-offset: .9375rem;
+	--transition: 0.3s ease-in;
+}
