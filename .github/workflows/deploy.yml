@@ -33,3 +33,4 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist  # папка со сборкой (поменяйте на свою)
           publish_branch: gh-pages
+          cname: stage.rimtub.pp.ua
