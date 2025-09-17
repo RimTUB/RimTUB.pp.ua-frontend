@@ -1,6 +1,7 @@
 @use './fluid-sizes'as *;
+@use '../base/vars'as *;
 
-@mixin focus($color: currentColor, $thickness: 2, $offset: 3) {
+@mixin focus($color: $accent-light, $thickness: 2, $offset: 2) {
 	&:focus {
 		outline: none;
 	}

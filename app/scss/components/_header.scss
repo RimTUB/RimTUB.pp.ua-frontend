@@ -1,1 +1,53 @@
-// код
+/* stylelint-disable value-keyword-case */
+@use '../base'as *;
+@use '../mixins'as *;
+@use '../settings'as *;
+
+.header {
+	&__inner {
+		@include fhc;
+
+		justify-content: space-between;
+		padding-block: rem(30);
+	}
+
+	&__logo {
+		a {
+			display: inline-flex;
+			column-gap: rem(10);
+			align-items: center;
+			text-decoration: none;
+
+			@include focus;
+		}
+
+		img {
+			border-radius: 100%
+		}
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	&__actions {
+		@include fcsb;
+
+		column-gap: rem(10);
+	}
+}
+
+[data-action-link] {
+	@include fcc;
+	@include focus;
+
+	border-radius: 100%;
+	width: rem(30);
+	height: rem(30);
+	text-decoration: none;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

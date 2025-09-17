@@ -1,0 +1,75 @@
+/* stylelint-disable scss/selector-no-redundant-nesting-selector */
+/* stylelint-disable shorthand-property-no-redundant-values */
+@use '../base'as *;
+@use '../mixins'as *;
+@use '../settings'as *;
+
+.translate {
+	position: relative;
+	margin-right: rem(15);
+
+	&.is-open {
+		.translate__list {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		.translate__link {
+			color: $accent-light;
+		}
+	}
+
+	&__link {
+		position: relative;
+		text-decoration: none;
+		transition: color var(--transition);
+
+		@include focus;
+
+		@include hover {
+			color: $accent-light;
+		}
+
+		&::after {
+			@include ac-y;
+
+			content: '';
+			left: 107%;
+			border-style: solid;
+			border-width: rem(7) rem(5) 0 rem(5);
+			border-color: $black transparent transparent transparent;
+		}
+	}
+
+	&__list {
+		@include fcc;
+
+		position: absolute;
+		right: 0;
+		top: 100%;
+		border-radius: $radius;
+		padding: rem(5) rem(7);
+		background-color: $gray-500;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity var(--transition), visibility var(--transition);
+		pointer-events: none;
+		row-gap: rem(8);
+
+		li {
+			a {
+				width: 100%;
+				text-decoration: none;
+				color: $white;
+				transition: color var(--transition);
+
+				@include focus;
+
+				@include hover {
+					color: $accent-light;
+				}
+			}
+		}
+	}
+}

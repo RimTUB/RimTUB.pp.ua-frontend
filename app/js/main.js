@@ -1,1 +1,2 @@
-import './components/test.js';
+import './components/header.js';
+import './components/translate.js';

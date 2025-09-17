@@ -1,0 +1,81 @@
+@use '../base'as *;
+@use '../mixins'as *;
+@use '../settings'as *;
+
+.menu {
+	@include fcsb;
+
+	column-gap: rem(15);
+
+	ul {
+		@extend .list-reset;
+
+		@include fhc;
+
+		column-gap: rem(20);
+	}
+
+	li {
+		&:nth-child(n + 5) {
+			display: none;
+		}
+
+		a {
+			text-decoration: none;
+			transition: color var(--transition);
+
+			@include focus;
+
+			@include hover {
+				color: $accent-light;
+			}
+		}
+	}
+
+	&__more {
+		position: relative;
+
+		ul {
+			@include fcc;
+
+			position: absolute;
+			right: 0;
+			top: 100%;
+			border-radius: $radius;
+			padding: rem(10) rem(5);
+			min-width: rem(150);
+			background-color: $gray-500;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity var(--transition), visibility var(--transition);
+			cursor: default;
+			row-gap: rem(10);
+
+			li {
+				width: 100%;
+				color: $white;
+
+				a {
+					display: inline-flex;
+					justify-content: center;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		@include focus;
+
+		display: none;
+		border: rem(2) solid $black;
+		border-radius: $radius;
+		padding: rem(2) rem(7);
+		color: $accent;
+
+		&.active + ul {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+class TranslateFocus {
+
+	selectors = {
+		translate: '.translate',
+		link: '.translate__link',
+		list: '.translate__list'
+	}
+
+	constructor() {
+		this.translate = document.querySelector(this.selectors.translate)
+		this.link = this.translate.querySelector(this.selectors.link)
+		this.list = this.translate.querySelector(this.selectors.list)
+		this.init()
+	}
+
+	init() {
+		this.link.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault()
+				this.openMenu()
+			}
+		})
+
+		this.translate.addEventListener('focusout', (e) => {
+			if (!this.translate.contains(e.relatedTarget)) {
+				this.closeMenu()
+			}
+		})
+
+		this.translate.addEventListener('mouseenter', () => {
+			this.openMenu(false)
+		})
+
+		this.translate.addEventListener('mouseleave', () => {
+			this.closeMenu(false)
+		})
+	}
+
+	openMenu(attribute = true) {
+		this.translate.classList.add('is-open')
+		if (attribute) {
+			this.link.setAttribute('aria-expanded', 'true')
+		}
+		this.list.hidden = false
+	}
+
+	closeMenu(attribute = true) {
+		this.translate.classList.remove('is-open')
+		if (attribute) {
+			this.link.setAttribute('aria-expanded', 'false')
+		}
+		this.list.hidden = true
+	}
+}
+
+new TranslateFocus()

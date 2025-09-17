@@ -3,7 +3,7 @@
 	"markupType": "html",
 
 	"localtunnel": {
-		"enabled": false,
+		"enabled": true,
 		"subdomain": "kingoffdarkness"
 	}
 }
