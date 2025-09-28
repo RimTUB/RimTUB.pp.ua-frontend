@@ -7,12 +7,20 @@
 
 // для маленьких компонентов
 
+
 @use "./components/menu"as *;
 @use "./components/translate"as *;
+@use "./components/documentation-submenu"as *;
+@use "./components/social"as *;
 
 // для больших компонентов
 
 @use "./components/header" as *;
+@use "./components/theme"as *;
 @use "./components/footer" as *;
 
+
+main {
+	padding: 1000px 0;
+}
 // libs

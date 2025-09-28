@@ -1,6 +1,6 @@
 const menu = document.querySelector('.menu')
-const menuList = document.querySelector('.menu ul')
-const dropdown = document.querySelector('.menu__more ul')
+const menuList = document.querySelector('.menu__list')
+const dropdown = document.querySelector('.menu__submenu')
 const dropdownBtn = menu.querySelector('.menu__btn')
 
 const allItems = Array.from(menuList.querySelectorAll('li'))

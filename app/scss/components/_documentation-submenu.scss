@@ -1,0 +1,18 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+[data-documentation-submenu] {
+	@extend .list-reset;
+
+	a {
+		text-decoration: none;
+		transition: color var(--transition);
+
+		@include focus;
+
+		@include hover {
+			color: $accent-light;
+		}
+	}
+}

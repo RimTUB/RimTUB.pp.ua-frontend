@@ -1,0 +1,40 @@
+@use '../base'as *;
+@use '../mixins'as *;
+@use '../settings'as *;
+
+.theme {
+	&__icon {
+		display: none;
+		width: rem(30);
+		height: rem(30);
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.dark-theme {
+	color-scheme: dark;
+
+	.page-body {
+		color: $white;
+		background-color: $black;
+		transition: color var(--transition), background-color var(--transition);
+	}
+
+	* {
+		border-color: $white;
+	}
+
+	.theme-icon {
+		path {
+			fill: $white;
+		}
+	}
+
+	.translate__link::after {
+		border-color: $white transparent transparent transparent;
+	}
+}

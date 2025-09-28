@@ -82,8 +82,8 @@
 		"gulp-webp": "^4.0.1",
 		"gulp-zip": "^6.0.0",
 		"htmlhint": "^1.1.4",
-		"path": "^0.12.7",
 		"localtunnel": "^2.0.2",
+		"path": "^0.12.7",
 		"postcss-combine-media-query": "^1.0.1",
 		"sass": "^1.83.0",
 		"style-loader": "^4.0.0",
@@ -101,6 +101,7 @@
 		"darkmodal": "^1.0.7",
 		"simplebar": "^6.2.7",
 		"swiper": "^11.1.14",
+		"tippy.js": "^6.3.7",
 		"transfer-elements": "^1.0.7",
 		"wicg-inert": "^3.1.3"
 	}

@@ -14,10 +14,15 @@ class TranslateFocus {
 	}
 
 	init() {
-		this.link.addEventListener('keydown', (e) => {
+		this.translate.addEventListener('keydown', (e) => {
 			if (e.key === 'Enter' || e.key === ' ') {
 				e.preventDefault()
 				this.openMenu()
+			}
+
+			if (e.key === 'Escape') {
+				this.closeMenu()
+				this.link.focus()
 			}
 		})
 

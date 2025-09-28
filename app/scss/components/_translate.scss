@@ -1,4 +1,4 @@
-/* stylelint-disable scss/selector-no-redundant-nesting-selector */
+/* stylelint-disable declaration-no-important */
 /* stylelint-disable shorthand-property-no-redundant-values */
 @use '../base'as *;
 @use '../mixins'as *;
@@ -6,7 +6,7 @@
 
 .translate {
 	position: relative;
-	margin-right: rem(15);
+	margin-right: rem(30);
 
 	&.is-open {
 		.translate__list {
@@ -28,7 +28,7 @@
 		@include focus;
 
 		@include hover {
-			color: $accent-light;
+			color: $accent-dark;
 		}
 
 		&::after {
@@ -39,14 +39,14 @@
 			border-style: solid;
 			border-width: rem(7) rem(5) 0 rem(5);
 			border-color: $black transparent transparent transparent;
-		}
+			}
 	}
 
 	&__list {
 		@include fcc;
 
 		position: absolute;
-		right: 0;
+		right: -25%;
 		top: 100%;
 		border-radius: $radius;
 		padding: rem(5) rem(7);
@@ -55,10 +55,15 @@
 		visibility: hidden;
 		transition: opacity var(--transition), visibility var(--transition);
 		pointer-events: none;
-		row-gap: rem(8);
+		row-gap: rem(7);
 
 		li {
+			width: 100%;
+
 			a {
+				display: inline-block;
+				border-radius: $radius;
+				padding: rem(3) rem(4);
 				width: 100%;
 				text-decoration: none;
 				color: $white;
@@ -71,5 +76,13 @@
 				}
 			}
 		}
+	}
+}
+
+[data-translate-active] {
+	background-color: $accent-light;
+
+	@include hover {
+		color: $black !important;
 	}
 }

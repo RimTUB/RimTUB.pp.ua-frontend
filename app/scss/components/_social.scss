@@ -1,0 +1,24 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.social {
+	@include fhc;
+
+	column-gap: rem(10);
+
+	&__link {
+		@include fcc;
+		@include focus;
+
+		border-radius: 100%;
+		width: rem(30);
+		height: rem(30);
+		text-decoration: none;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
