@@ -1,0 +1,6 @@
+/**
+ * @file Dynamic transfer of elements from one place to another at breakpoints.
+ * @copyright SineYlo, 2024
+ * @version 1.0.7
+ * @license MIT
+ */
