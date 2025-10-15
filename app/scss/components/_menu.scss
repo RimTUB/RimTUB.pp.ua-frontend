@@ -2,6 +2,12 @@
 @use '../mixins'as *;
 @use '../settings'as *;
 
+.dark-theme .menu {
+	@include laptop-min {
+		background-color: $gray-600;
+	}
+}
+
 .menu {
 	@include fcsb;
 
@@ -13,7 +19,7 @@
 		z-index: 10;
 		display: block;
 		overflow: auto;
-		background-color: $gray-300;
+		background-color: $gray-100-200;
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-130%);

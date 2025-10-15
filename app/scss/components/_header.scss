@@ -50,6 +50,10 @@
 			@include mobile-max {
 				font-size: rem(20)
 			}
+
+			@include mobile-min {
+				font-size: rem(18);
+			}
 		}
 	}
 
