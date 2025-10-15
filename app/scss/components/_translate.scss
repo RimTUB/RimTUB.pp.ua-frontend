@@ -8,6 +8,12 @@
 	position: relative;
 	margin-right: rem(30);
 
+	@include laptop-min {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: calc((var(--header-padding) + var(--header-height)) / 2);
+	}
+
 	&.is-open {
 		.translate__list {
 			opacity: 1;
@@ -29,6 +35,10 @@
 
 		@include hover {
 			color: $accent-dark;
+		}
+
+		@include mobile-max {
+			font-size: rem(14);
 		}
 
 		&::after {
@@ -56,6 +66,11 @@
 		transition: opacity var(--transition), visibility var(--transition);
 		pointer-events: none;
 		row-gap: rem(7);
+
+		@include laptop-min {
+			right: -1.5%;
+			top: 100%;
+		}
 
 		li {
 			width: 100%;

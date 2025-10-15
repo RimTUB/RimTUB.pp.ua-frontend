@@ -4,11 +4,16 @@
 @use '../settings'as *;
 
 .header {
+	padding-block: rem(30);
+
+	@include laptop-min {
+		padding-block: rem(20);
+	}
+
 	&__inner {
 		@include fhc;
 
 		justify-content: space-between;
-		padding-block: rem(30);
 	}
 
 	&__logo {
@@ -22,11 +27,29 @@
 		}
 
 		img {
-			border-radius: 100%
+			border-radius: 100%;
+
+			@include laptop-min {
+				width: rem(60);
+				height: rem(60);
+			}
+
+			@include mobile-max {
+				width: rem(50);
+				height: rem(50);
+			}
 		}
 
 		h1 {
 			margin: 0;
+
+			@include laptop-min {
+				font-size: rem(26);
+			}
+
+			@include mobile-max {
+				font-size: rem(20)
+			}
 		}
 	}
 

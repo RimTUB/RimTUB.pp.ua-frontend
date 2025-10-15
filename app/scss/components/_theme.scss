@@ -3,10 +3,19 @@
 @use '../settings'as *;
 
 .theme {
+	@include focus;
+
 	&__icon {
 		display: none;
 		width: rem(30);
 		height: rem(30);
+
+		@include mobile-max {
+			width: rem(25);
+			height: rem(25);
+		}
+
+		@include focus;
 
 		svg {
 			width: 100%;

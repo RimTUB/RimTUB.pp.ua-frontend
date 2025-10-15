@@ -9,7 +9,16 @@ class Theme {
 	}
 
 	init() {
-		this.systemTheme()
+		const savedTheme = localStorage.getItem('theme')
+		if (savedTheme === 'dark') {
+			this.setDark()
+		}
+		else if (savedTheme === 'light') {
+			this.setLight()
+		}
+		else {
+			this.systemTheme()
+		}
 
 		this.themeBtn.addEventListener('click', () => {
 			this.clickBtn()

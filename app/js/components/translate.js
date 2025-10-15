@@ -1,3 +1,5 @@
+import TransferElements from 'transfer-elements';
+
 class TranslateFocus {
 
 	selectors = {
@@ -59,3 +61,14 @@ class TranslateFocus {
 }
 
 new TranslateFocus()
+
+
+new TransferElements({
+  sourceElement: document.querySelector('.translate'), // какой элемент надо перенести
+  breakpoints: {
+    900: {
+      targetElement: document.querySelector('.menu'), // куда надо перенести
+      targetPosition: 0 // указать позицию перед каким элементом должно встать, по умолчанию 0
+    }
+  }
+})

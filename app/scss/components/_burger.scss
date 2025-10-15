@@ -1,0 +1,74 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.burger {
+	z-index: 11;
+	display: none;
+
+	@include focus;
+
+	@include laptop-min {
+		position: relative;
+		display: inline-flex;
+		column-gap: rem(5);
+		align-items: center;
+	}
+
+	&__line {
+		border-radius: $radius;
+		width: rem(20);
+		height: rem(3);
+		background-color: $accent;
+		transition: transform var(--transition-menu), opacity var(--transition-menu);
+
+		@include mobile-max {
+			height: rem(2);
+		}
+
+		&:nth-child(1) {
+			.header.open & {
+				transform: translateY(rem(6)) rotate(45deg);
+
+				@include mobile-max {
+					transform: translateY(rem(5)) rotate(45deg);
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			.header.open & {
+				opacity: 0;
+			}
+		}
+
+		&:nth-child(3) {
+			.header.open & {
+				transform: translateY(rem(-6)) rotate(-45deg);
+
+				@include mobile-max {
+					transform: translateY(rem(-5)) rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&__container {
+		display: inline-flex;
+		flex-direction: column;
+		row-gap: rem(3);
+	}
+
+	&__text {
+		position: relative;
+		padding-top: rem(1);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $accent;
+
+		@include mobile-max {
+			padding-top: rem(2);
+			font-size: rem(14);
+		}
+	}
+}
