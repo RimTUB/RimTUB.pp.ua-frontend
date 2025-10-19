@@ -37,13 +37,13 @@
 		border-color: $white;
 	}
 
-	.header & {
-		.menu {
-			@include laptop-min {
-				background-color: $gray-600;
-			}
+
+	.menu {
+		@include laptop-min {
+			background-color: $gray-600;
 		}
 	}
+
 
 	.footer {
 		background-color: $gray-600;
