@@ -2,62 +2,63 @@
 @use '../mixins'as *;
 @use '../settings'as *;
 
-.dark-theme .menu {
-	@include laptop-min {
-		background-color: $gray-600;
-	}
-}
 
 .menu {
-	@include fcsb;
+	.header & {
+		@include fcsb;
 
-	column-gap: rem(15);
+		column-gap: rem(15);
 
-	@include laptop-min {
-		position: fixed;
-		inset: 0;
-		z-index: 10;
-		display: block;
-		overflow: auto;
-		background-color: $gray-100-200;
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(-130%);
-		transition: opacity var(--transition-menu),
-		visibility var(--transition-menu),
-		transform var(--transition-menu);
-		pointer-events: none;
-
-		.header.open & {
-			opacity: 1;
-			visibility: visible;
-			transform: translateY(0);
-			pointer-events: auto;
+		@include laptop-min {
+			position: fixed;
+			inset: 0;
+			z-index: 10;
+			display: block;
+			overflow: auto;
+			background-color: $gray-100-200;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-130%);
+			transition: opacity var(--transition-menu),
+				visibility var(--transition-menu),
+				transform var(--transition-menu);
+			pointer-events: none;
 		}
+	}
+
+	.header.open & {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		pointer-events: auto;
 	}
 
 	&__list {
-		@include fhc;
+		.header & {
+			@include fhc;
 
-		column-gap: rem(20);
+			column-gap: rem(20);
 
-		@include laptop-min {
-			flex-direction: column;
-			padding-top: calc(var(--header-height) / 2);
-			padding-left: rem(50);
-			width: 100%;
-			gap: rem(15) 0;
-		}
+			@include laptop-min {
+				flex-direction: column;
+				padding-top: calc(var(--header-height) / 2);
+				padding-left: rem(50);
+				width: 100%;
+				gap: rem(15) 0;
+			}
 
-		@include mobile-max {
-			padding-left: rem(30);
+			@include mobile-max {
+				padding-left: rem(30);
+			}
 		}
 	}
 
 	&__item {
-		@include laptop-min-up {
-			&:nth-child(n + 5) {
-				display: none;
+		.header & {
+			@include laptop-min-up {
+				&:nth-child(n + 5) {
+					display: none;
+				}
 			}
 		}
 

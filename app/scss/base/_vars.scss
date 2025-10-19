@@ -34,4 +34,5 @@ $height-web: 67.5rem;
 	--container-offset: .9375rem;
 	--transition: 0.2s ease-in;
 	--transition-menu: 0.4s ease-in-out;
+	--100vw: calc(100vw - var(--scrollbar-width));
 }

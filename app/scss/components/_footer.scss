@@ -1,1 +1,142 @@
-// код
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+@mixin full-vw-centered-line($property: top,
+	$left: 50%,
+	$right: auto,
+	$translate: -50%) {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: $left;
+		right: $right;
+		#{$property}: #{rem(-30)};
+		width: var(--100vw);
+		height: rem(1);
+		background-color: $gray-400;
+		translate: $translate;
+	}
+}
+
+.footer {
+	background-color: $gray-500;
+	padding-block: rem(50);
+
+	@include mobile-max {
+		padding-block: rem(20);
+	}
+
+	&__logo {
+		h2 {
+			margin: 0;
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+
+		@include laptop-min {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: rem(60) rem(30);
+		}
+
+		@include mobile-max {
+			grid-template-columns: repeat(1, minmax(rem(230), 1fr));
+			gap: 0;
+		}
+	}
+
+	&__column {
+		position: relative;
+		padding-inline: rem(20);
+
+		&:not(:last-child) {
+			border-right: rem(1) solid $gray-400;
+		}
+
+		@include laptop-min {
+			padding-inline: rem(7);
+
+			&:not(:last-child) {
+				border-right: none;
+			}
+
+			&:nth-child(2) {
+				@include full-vw-centered-line(bottom, auto, -15px, 0);
+			}
+
+			&:nth-child(odd) {
+				border-right: rem(1) solid $gray-400;
+			}
+		}
+
+		@include mobile-max {
+			padding-block: rem(30);
+			padding-inline: 0;
+
+			&:nth-child(2) {
+				&::before {
+					display: none;
+				}
+			}
+
+			&:nth-child(odd) {
+				border-right: none;
+			}
+
+			&:not(:last-child) {
+				border-bottom: rem(1) solid $gray-400;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: rem(15);
+		font-weight: 500;
+		text-transform: capitalize;
+
+		@include mobile-max {
+			font-size: rem(18);
+			text-align: center;
+		}
+	}
+
+	&__text {
+		@include mobile-max {
+			text-align: center;
+		}
+	}
+
+	&__social {
+		@include mobile-max {
+			justify-content: center;
+		}
+	}
+}
+
+.footer-menu {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(10);
+
+		@include mobile-max {
+			align-items: center;
+			row-gap: rem(8);
+		}
+	}
+}
+
+.footer-modules {
+	&__list {
+		@include mobile-max {
+			align-items: center;
+			row-gap: rem(8);
+		}
+	}
+}

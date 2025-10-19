@@ -1,0 +1,22 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.modules {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(10);
+	}
+
+	&__link {
+		text-decoration: none;
+		transition: color var(--transition);
+
+		@include focus;
+
+		@include hover {
+			color: $accent-dark;
+		}
+	}
+}

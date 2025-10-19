@@ -1,0 +1,18 @@
+@use '../base'as *;
+@use '../mixins'as *;
+@use '../settings'as *;
+
+.logo {
+	a {
+		display: inline-flex;
+		column-gap: rem(10);
+		align-items: center;
+		text-decoration: none;
+
+		@include focus;
+	}
+
+	img {
+		border-radius: 100%;
+	}
+}

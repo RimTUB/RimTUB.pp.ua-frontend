@@ -17,18 +17,7 @@
 	}
 
 	&__logo {
-		a {
-			display: inline-flex;
-			column-gap: rem(10);
-			align-items: center;
-			text-decoration: none;
-
-			@include focus;
-		}
-
 		img {
-			border-radius: 100%;
-
 			@include laptop-min {
 				width: rem(60);
 				height: rem(60);

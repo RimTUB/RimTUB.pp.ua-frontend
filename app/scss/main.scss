@@ -8,11 +8,13 @@
 // для маленьких компонентов
 
 
+@use "./components/logo"as *;
 @use "./components/menu"as *;
 @use "./components/burger"as *;
 @use "./components/translate"as *;
 @use "./components/documentation-submenu"as *;
 @use "./components/social"as *;
+@use "./components/modules"as *;
 
 // для больших компонентов
 
@@ -21,8 +23,4 @@
 @use "./components/theme"as *;
 @use "./components/footer" as *;
 
-
-main {
-	padding: 1000px 0;
-}
 // libs

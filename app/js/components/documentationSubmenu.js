@@ -1,17 +1,17 @@
 import tippy from 'tippy.js'
 import 'tippy.js/dist/tippy.css'
 
-const link = document.querySelector('[data-documentation-link]')
+const links = document.querySelectorAll('[data-documentation-link]')
 
-if (link) {
+links.forEach(link => {
 	const instance = tippy(link, {
 		content: `
-				<ul data-documentation-submenu>
-					<li>
-						<a href="https://mirror.docs.rimtub.pp.ua" target="_blank">Mirror</a>
-					</li>
-				</ul>
-			`,
+					<ul data-documentation-submenu>
+						<li>
+							<a href="https://mirror.docs.rimtub.pp.ua" target="_blank">Mirror</a>
+						</li>
+					</ul>
+				`,
 		trigger: 'manual',
 		interactive: true,
 		allowHTML: true,
@@ -34,7 +34,7 @@ if (link) {
 	})
 
 	link.addEventListener('keydown', (e) => {
-		if (e.key === ' ')  {
+		if (e.key === ' ') {
 			e.preventDefault()
 			instance.show()
 		}
@@ -44,4 +44,4 @@ if (link) {
 			link.focus()
 		}
 	})
-}
+})
