@@ -1,0 +1,20 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+#stop-war {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	width: rem(90);
+	height: rem(90);
+	background-image: url('#img/stop-war.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include laptop {
+		display: none;
+	}
+}

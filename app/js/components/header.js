@@ -62,7 +62,6 @@ const header = document.querySelector('.header')
 const heightHeaderInner = headerInner.offsetHeight
 document.documentElement.style.setProperty('--header-height', `${heightHeaderInner}px`)
 
-
 const headerPadding = getComputedStyle(header).paddingBlock
 document.documentElement.style.setProperty('--header-padding', headerPadding)
 

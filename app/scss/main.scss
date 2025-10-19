@@ -16,6 +16,7 @@
 
 // для больших компонентов
 
+@use "./components/stop-war" as *;
 @use "./components/header" as *;
 @use "./components/theme"as *;
 @use "./components/footer" as *;

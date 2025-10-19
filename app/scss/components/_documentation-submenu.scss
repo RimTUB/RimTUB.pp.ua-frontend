@@ -2,6 +2,27 @@
 @use '../mixins' as *;
 @use '../settings' as *;
 
+.tippy-box[data-theme~='submenu'] {
+	color: $white;
+	background-color: $gray-400;
+}
+
+.tippy-box[data-theme~='submenu'][data-placement^='top']>.tippy-arrow::before {
+	border-top-color: $gray-400;
+}
+
+.tippy-box[data-theme~='submenu'][data-placement^='bottom']>.tippy-arrow::before {
+	border-bottom-color: $gray-400;
+}
+
+.tippy-box[data-theme~='submenu'][data-placement^='left']>.tippy-arrow::before {
+	border-left-color: $gray-400;
+}
+
+.tippy-box[data-theme~='submenu'][data-placement^='right']>.tippy-arrow::before {
+	border-right-color: $gray-400;
+}
+
 [data-documentation-submenu] {
 	@extend .list-reset;
 

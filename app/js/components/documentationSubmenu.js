@@ -5,7 +5,7 @@ const link = document.querySelector('[data-documentation-link]')
 
 if (link) {
 	const instance = tippy(link, {
-		 content: `
+		content: `
 				<ul data-documentation-submenu>
 					<li>
 						<a href="https://mirror.docs.rimtub.pp.ua" target="_blank">Mirror</a>
@@ -17,7 +17,7 @@ if (link) {
 		allowHTML: true,
 		placement: 'bottom',
 		animation: 'perspective-extreme',
-		theme: 'material',
+		theme: 'submenu',
 		onShow(instance) {
 			link.setAttribute('aria-expanded', 'true')
 			instance.popper.querySelector('a')?.focus()

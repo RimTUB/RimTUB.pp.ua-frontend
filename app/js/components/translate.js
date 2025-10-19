@@ -64,11 +64,11 @@ new TranslateFocus()
 
 
 new TransferElements({
-  sourceElement: document.querySelector('.translate'), // какой элемент надо перенести
+  sourceElement: document.querySelector('.translate'),
   breakpoints: {
     900: {
-      targetElement: document.querySelector('.menu'), // куда надо перенести
-      targetPosition: 0 // указать позицию перед каким элементом должно встать, по умолчанию 0
+      targetElement: document.querySelector('.menu'), 
+      targetPosition: 0
     }
   }
 })
