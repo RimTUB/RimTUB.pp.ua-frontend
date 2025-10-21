@@ -22,13 +22,13 @@ class MenuItems {
 		const mediaQuery = window.matchMedia('(min-width: 56.25rem)')
 		if (mediaQuery.matches) {
 			if (this.allItems.length > this.visibleCount) {
-			this.dropdownBtn.style.display = 'block'
+				this.dropdownBtn.style.display = 'block'
 
-			const hiddenItems = this.allItems.slice(this.visibleCount)
+				const hiddenItems = this.allItems.slice(this.visibleCount)
 
-			hiddenItems.forEach(item => this.menuList.removeChild(item))
-			hiddenItems.forEach(item => this.dropdown.appendChild(item))
-		}
+				hiddenItems.forEach(item => this.menuList.removeChild(item))
+				hiddenItems.forEach(item => this.dropdown.appendChild(item))
+			}
 		}
 
 
@@ -64,5 +64,3 @@ document.documentElement.style.setProperty('--header-height', `${heightHeaderInn
 
 const headerPadding = getComputedStyle(header).paddingBlock
 document.documentElement.style.setProperty('--header-padding', headerPadding)
-
-

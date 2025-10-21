@@ -4,3 +4,4 @@ import './components/translate.js';
 import './components/documentationSubmenu.js';
 import './components/theme.js';
 import './components/scrollBarWidth.js';
+import './components/languageRoute.js';
