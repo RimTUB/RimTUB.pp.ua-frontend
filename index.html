@@ -141,7 +141,383 @@
     </header>
 
     <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h2 class="hero__title">RimTUB — RimMirK’s Telegram User Bot</h2>
 
+          <div class="banner">
+            <picture>
+              <source srcset="images/banner.avif" type="image/avif">
+              <source srcset="images/banner.webp" type="image/webp"><img src="images/banner.png" alt="banner" width="830" height="415">
+            </picture>
+          </div>
+
+          <div class="banner-ukraine">
+            <a class="banner-ukraine__made" href="https://www.youtube.com/watch?v=nybtOIxlku8">
+              <img src="images/ukraine/made-in-ukraine.svg" alt="made in Ukraine" width="162" height="28">
+            </a>
+
+            <div class="banner-ukraine__stand">
+              <img src="images/ukraine/help-ukraine.svg" alt="#StandWithUkraine" width="830" height="135" loading="lazy">
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="content__block">
+              <p><strong>RimTUB</strong> — is a powerful and convenient open-source Telegram userbot that’s easy to adapt to
+                your needs.</p>
+              <p>Everything
+                necessary is already built-in, and extending its capabilities only requires installing the modules you need.
+                Simple to launch, flexible in configuration, and completely under your control — RimTUB is created to do more
+                with
+                less effort.</p>
+
+              <blockquote class="blockquote">
+                <p>🤖 UserBots are scripts that work on behalf of your personal Telegram account. They can do everything a
+                  regular user can do.</p>
+                <p>😀 For example, you can create an auto-responder that will automatically react to specific messages.</p>
+                <p>✅ Usually, UserBots are used as Telegram extensions — a built-in calculator, quick translator, auto-adding
+                  people to chats, etc. You’ve probably already encountered such things. For instance, someone writes
+                  <code class="code">.calc 2+2</code>, and the message transforms into <code>4</code>.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="content__block">
+              <h3>Why RimTUB is the best choice</h3>
+              <ul>
+                <li>
+                  <p><b>Modularity</b> — extend functionality according to your wishes. Write your own modules or use
+                    ready-made
+                    ones.</p>
+                </li>
+
+                <li>
+                  <p><b>Convenience</b> — everything is intuitive: download, configure, run.</p>
+                </li>
+
+                <li>
+                  <p><b>Flexibility</b> — want to change Telegram’s behavior? Modules allow you to implement <b>anything</b>!
+                  </p>
+                </li>
+
+                <li>
+                  <p><b>Multi-account</b> — connect multiple Telegram accounts and manage them without issues, everything
+                    works smoothly.</p>
+                </li>
+
+                <li>
+                  <p><b>Cross-platform</b> — works on Windows, Linux, macOS, and even Android (Termux).</p>
+                </li>
+
+                <li>
+                  <p><b>Easy deployment on hosting</b> — our partner
+                    <a href="https://t.me/MavisHostNews/28">MavisHost</a>
+                    allows you to launch RimTUB in just a few clicks, without the need to
+                    configure servers.
+                  </p>
+                </li>
+
+                <li>
+                  <p><b>Open source</b> — with GPLv3 license.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="content__block">
+              <h3>Our website: <a href="https://rimtub.pp.ua">RimTUB.pp.ua</a></h3>
+              <span>Here you can:</span>
+              <ul>
+                <li>Learn more about RimTUB</li>
+                <li>Download modules</li>
+                <li>Read articles</li>
+              </ul>
+            </div>
+
+            <div class="content__block">
+              <h3>Useful «out of the box» commands</h3>
+
+              <ul>
+                <li><code class="code">.me</code> — info about the userbot (version, uptime, etc.).</li>
+                <li><code class="code">.help</code> — help on userbot.</li>
+                <li><code class="code">.ping</code> — ping test.</li>
+                <li><code class="code">.restart</code> — restart the userbot.</li>
+                <li><code class="code">.calc &lt;expression&gt;</code> — calculator.</li>
+                <li><code class="code">.tr &lt;language&gt; &lt;text/reply/quote&gt;</code> — translator.</li>
+                <li><code class="code">.dml &lt;link&gt;</code> — install module from link (from website, for example).</li>
+                <li><code class="code">.dmf &lt;reply to file&gt;</code> — install module from file.</li>
+              </ul>
+            </div>
+
+            <div class="content__block installation">
+              <h3>Installation</h3>
+
+              <details>
+                <summary><strong>Windows</strong></summary>
+                <div class="installation__block">
+                  <h3>Step 1. Download RimTUB</h3>
+
+                  <ol>
+                    <li>Go to: <a href="https://github.com/RimTUB/RimTUB/releases">GitHub Releases</a>
+                    </li>
+
+                    <li>
+                      Click on the item with the <code class="code">Latest</code> badge (this is the latest
+                      version).
+                    </li>
+
+                    <li>
+                      Below, click on assets (file list)
+                    </li>
+
+                    <li>
+                      In the file list, find an archive named like
+                      <code class="code">RimTUB-XXX.zip</code> (XXX is the userbot version) — click on it to
+                      download.
+                    </li>
+
+                    <li>
+                      When it’s downloaded — open the folder with the file, right-click on the
+                      archive and select <strong>«Extract All»</strong>.
+                    </li>
+
+                    <li>
+                      Enter a path, for example: <code class="code">C:\RimTUB</code>, and click
+                      <strong>«Extract»</strong>.
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 2. Create a Telegram bot</h3>
+
+                  <ol>
+                    <li>
+                      Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+                    </li>
+
+                    <li>
+                      Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+                      silent.
+                    </li>
+
+                    <li>
+                      Type <code>/newbot</code>, set a name and link for the bot (for example,
+                      <code>RimTUB_nickname_bot</code>).
+                    </li>
+
+                    <li>
+                      BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+                      looks like <code class="code">123456:ABC-DEF...</code>).
+                    </li>
+
+                    <li>
+                      ❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+                      <code class="code">asdfjwekjdsf</code> ❗️
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 3. Configure RimTUB</h3>
+
+                  <ol>
+                    <li>
+                      Go to the <code class="code">C:\RimTUB</code> folder that you just unpacked.
+                    </li>
+
+                    <li>
+                      Find the <code class="code">config.yaml</code> file there.
+                    </li>
+
+                    <li>
+                      Open it with a double click. If nothing happens — right-click and select
+                      <strong>«Open with → Notepad»</strong>.
+                    </li>
+
+                    <li>
+                      Insert your data there. Example:
+                      <pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+                    </li>
+
+                    <li>
+                      Save the file: <strong>File → Save</strong>.
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 4. Run RimTUB</h3>
+
+                  <ol>
+                    <li>
+                      Go to <a href="https://www.python.org">python.org.</a>
+                    </li>
+
+                    <li>
+                      Hover over «Downloads» and select <strong>Windows</strong>.
+                    </li>
+
+                    <li>
+                      Click <strong>«Download Python 3.11.9»</strong>.
+                    </li>
+
+                    <li>
+                      When the installer downloads — <strong>MAKE SURE to check «Add Python to
+                                    PATH»</strong>, then click <strong>«Install Now»</strong>.
+                    </li>
+
+                    <li>
+                      Wait for the installation to complete and close the window.
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 5. Install dependencies</h3>
+                  <ol>
+                    <li>
+                      Press <strong>Win + R</strong> keys, a window will appear.
+                    </li>
+
+                    <li>
+                      Type <code class="code">cmd</code> and press <strong>Enter</strong> — a black
+                      window will open (command prompt).
+                    </li>
+
+                    <li>
+                      Enter the following commands one by one (press <strong>Enter</strong> after
+                      each):
+
+                      <pre><code class="shell">cd C:\RimTUB
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install -r requirements.txt
+python main.py</code></pre>
+                    </li>
+
+                    <li>
+                      ⚠ If a window appears asking for permission to access the internet — click
+                      <strong>«Allow»</strong>.
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 6. Confirm login</h3>
+
+                  <ol>
+                    <li>
+                      After launching, the bot will ask you to enter a code.
+                    </li>
+
+                    <li>
+                      Telegram will send you an SMS — enter this code in the console.
+                    </li>
+
+                    <li>
+                      If you have two-factor authentication enabled (password when logging into
+                      Telegram) — enter it as well. You’ll only need to do this once
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <p>🎉 Done! RimTUB is running! Hooray!</p>
+                </div>
+
+              </details>
+
+              <details>
+                <summary><strong>Docker</strong></summary>
+
+                <div class="installation__block">
+                  <h3>Step 1. Clone the RimTUB repository</h3>
+
+                  <ol>
+                    <li>
+                      In terminal, enter the command:
+                      <pre><code class="shell">git clone https://github.com/RimTUB/RimTUB</code></pre>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 2. Create a Telegram bot</h3>
+
+                  <ol>
+                    <li>
+                      Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+                    </li>
+
+                    <li>
+                      Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+                      silent.
+                    </li>
+
+                    <li>
+                      Type <code>/newbot</code>, set a name and link for the bot (for example,
+                      <code>RimTUB_nickname_bot</code>).
+                    </li>
+
+                    <li>
+                      BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+                      looks like <code class="code">123456:ABC-DEF...</code>).
+                    </li>
+
+                    <li>
+                      ❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+                      <code class="code">asdfjwekjdsf</code> ❗️
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 3. Configure RimTUB</h3>
+
+                  <ol>
+                    <li>
+                      In terminal, navigate to the folder where you just cloned RimTUB:
+
+                      <pre><code class="shell">cd RimTUB</code></pre>
+                    </li>
+
+                    <li>
+                      Open the <code class="code">config.yaml</code> using a text editor, for example, <code class="code">nano</code>:
+
+                      <pre><code class="shell">nano config.yaml</code></pre>
+                    </li>
+
+                    <li>
+                      Insert your data there. Example:
+                      <pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+                    </li>
+
+                    <li>
+                      To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit by
+                      pressing <strong>Ctrl + X</strong>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 4. Run</h3>
+                </div>
+              </details>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -229,8 +605,8 @@
             <ul class="footer__social social list-reset">
               <li class="social__item">
                 <a class="social__link" href="https://github.com/RimTUB" target="_blank" aria-label="GitHub" title="GitHub">
-                  <svg class="theme-icon" width="30" height="30" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#1B1F23" />
+                  <svg width="30" height="30" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#ffff" />
                   </svg>
                 </a>
               </li>
@@ -239,7 +615,7 @@
                 <a class="social__link" href="https://github.com/RimTUB" target="_blank" aria-label="Telegram" title="Telegram">
                   <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="30" height="30" preserveAspectRatio="xMidYMid">
                     <defs>
-                      <linearGradient id="telegram__a" x1="50%" x2="50%" y1="0%" y2="100%">
+                      <linearGradient x1="50%" x2="50%" y1="0%" y2="100%">
                         <stop offset="0%" stop-color="#2AABEE" />
                         <stop offset="100%" stop-color="#229ED9" />
                       </linearGradient>
