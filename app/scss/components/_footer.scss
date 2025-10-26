@@ -22,11 +22,16 @@
 }
 
 .footer {
-	background-color: $gray-500;
+	color: $white;
+	background-color: $gray-700;
 	padding-block: rem(50);
 
 	@include mobile-max {
 		padding-block: rem(20);
+	}
+
+	a {
+		color: inherit;
 	}
 
 	&__logo {

@@ -1,0 +1,22 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.banner {
+	border-bottom: $border;
+	padding-block: rem(15);
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.banner-ukraine {
+	border-bottom: $border;
+	padding-block: rem(15);
+
+	&__stand {
+		width: 100%;
+	}
+}

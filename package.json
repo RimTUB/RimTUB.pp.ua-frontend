@@ -99,6 +99,8 @@
 	"dependencies": {
 		"aos": "^2.3.4",
 		"darkmodal": "^1.0.7",
+		"highlight.js": "^11.11.1",
+		"highlightjs-copy": "^1.0.6",
 		"simplebar": "^6.2.7",
 		"swiper": "^11.1.14",
 		"tippy.js": "^6.3.7",

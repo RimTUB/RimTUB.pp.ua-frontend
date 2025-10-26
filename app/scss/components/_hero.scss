@@ -1,0 +1,14 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.hero {
+	padding-block: rem(40);
+
+	&__title {
+		margin: 0;
+		border-bottom: rem(1) solid $gray-400;
+		padding-bottom: rem(15);
+	}
+}
+

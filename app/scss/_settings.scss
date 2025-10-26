@@ -1,1 +1,15 @@
-// настройки для вашего проекта: миксины, осовные классы
+@use './base'as *;
+@use './mixins'as *;
+
+.blockquote {
+	border-left: $border;
+	padding: 0 1em;
+	color: $gray-400;
+	margin-inline: 0;
+}
+
+.code {
+	border-radius: rem(6);
+	padding: 0.2em 0.4em;
+	background-color: $gray-200; // #4e535b33
+}
