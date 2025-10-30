@@ -1,0 +1,26 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.installation {
+	&__block {
+		ol {
+			padding-left: $offset;
+		}
+	}
+
+	details {
+		&:not(:last-child) {
+			margin-bottom: $padding-offset;
+		}
+
+		.installation__block:not(:last-child) {
+			border-bottom: $border;
+			padding-bottom: $padding-offset;
+		}
+
+		summary {
+			cursor: pointer;
+		}
+	}
+}

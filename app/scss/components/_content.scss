@@ -1,4 +1,3 @@
-/* stylelint-disable declaration-no-important */
 @use '../base'as *;
 @use '../mixins'as *;
 @use '../settings'as *;
@@ -10,37 +9,5 @@
 	}
 }
 
-.installation {
-	&__block {
-		border-bottom: $border;
-		padding-bottom: $padding-offset;
 
-		ol {
-			padding-left: $offset;
-		}
-	}
 
-	details {
-		&:not(:last-child) {
-			margin-bottom: $padding-offset;
-		}
-
-		summary {
-			cursor: pointer;
-		}
-	}
-}
-
-.hljs-copy-button {
-	cursor: pointer;
-
-	@include focus($offset: 0);
-}
-
-.hljs-copy-button:not([data-copied="true"])::before {
-	mask: url('#img/copy.svg') !important;
-}
-
-.hljs-copy-button[data-copied="true"] {
-	@include focus($green)
-}

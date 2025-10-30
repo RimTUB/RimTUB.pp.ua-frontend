@@ -14,6 +14,8 @@
 @use "./components/documentation-submenu" as *;
 @use "./components/social" as *;
 @use "./components/modules" as *;
+@use "./components/hljs-copy-button"as *;
+@use "./components/installation"as *;
 
 // для больших компонентов
 
