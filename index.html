@@ -509,6 +509,87 @@ BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
 
                 <div class="installation__block">
                   <h3>Step 4. Run</h3>
+
+                  <ol>
+                    <li>
+                      Enter the command to build RimTUB image:
+                      <pre><code class="shell">docker build -t rimtub .</code></pre>
+                    </li>
+
+                    <li>
+                      After building, run the container with the command:
+                      <pre><code class="shell">docker-compose up</code></pre>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3>Step 5. Confirm login</h3>
+
+                  <ol>
+                    <li>
+                      After launching, the bot will ask you to enter a code.
+                    </li>
+
+                    <li>
+                      Telegram will send you an SMS — enter this code in the console.
+                    </li>
+
+                    <li>
+                      If you have two-factor authentication enabled (password when logging into
+                      Telegram) — enter it as well. You’ll only need to do this once
+                    </li>
+
+                    <li>
+                      Double CTRL + C to exit:
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3> Step 6. Run</h3>
+                  <ol>
+                    <li>
+                      Enter the command to start RimTUB in background:
+                      <pre><code class="shell">docker-compose up -d</code></pre>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  🎉 Done! RimTUB is working in Docker! Hooray!
+                </div>
+              </details>
+
+              <details>
+                <summary><strong>Linux</strong></summary>
+
+                <div class="installation__block">
+                  <h3>Step 1. Install necessary dependencies</h3>
+
+                  <ol>
+                    <li>
+                      Open terminal.
+                    </li>
+
+                    <li>
+                      Enter the following command to update packages and install dependencies:
+                      <pre><code class="shell">sudo apt update
+sudo apt install git python3.11 python3.11-venv -y</code></pre>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="installation__block">
+                  <h3> Step 2. Clone the RimTUB repository</h3>
+
+                  <ol>
+                    <li>
+                      In terminal, enter the command:
+                      <pre><code class="shell">git clone https://github.com/RimTUB/RimTUB</code>
+								</pre>
+                    </li>
+                  </ol>
                 </div>
               </details>
 
