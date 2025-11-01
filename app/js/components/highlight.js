@@ -2,8 +2,8 @@
 import hljs from 'highlight.js/lib/core'
 import yaml from 'highlight.js/lib/languages/yaml'
 import shell from 'highlight.js/lib/languages/shell'
-import 'highlight.js/styles/default.min.css'
-import CopyButtonPlugin from "highlightjs-copy"
+import 'highlight.js/styles/a11y-dark.min.css'
+import CopyButtonPlugin from 'highlightjs-copy'
 import 'highlightjs-copy/dist/highlightjs-copy.min.css'
 
 hljs.registerLanguage('yaml', yaml)

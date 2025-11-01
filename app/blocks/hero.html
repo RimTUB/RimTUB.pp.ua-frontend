@@ -86,7 +86,7 @@
 				</ul>
 			</div>
 
-			<div class="content__block">
+			<div class="content__block content__block--commands">
 				<h3>Useful "out of the box" commands</h3>
 
 				<ul>
@@ -338,7 +338,8 @@ python main.py</code></pre>
 							</li>
 
 							<li>
-								Open the <code class="code">config.yaml</code> using a text editor, for example, <code class="code">nano</code> :
+								Open the <code class="code">config.yaml</code> using a text editor, for example, <code
+									class="code">nano</code> :
 
 								<pre><code class="shell">nano config.yaml</code></pre>
 							</li>
@@ -353,7 +354,8 @@ BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
 							</li>
 
 							<li>
-								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit by
+								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit
+								by
 								pressing <strong>Ctrl + X</strong>
 							</li>
 						</ol>
@@ -409,7 +411,7 @@ BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
 					</div>
 
 					<div class="installation__block">
-						🎉 Done! RimTUB is working in Docker! Hooray!
+						<p>🎉 Done! RimTUB is working in Docker! Hooray!</p>
 					</div>
 				</details>
 
@@ -443,8 +445,695 @@ sudo apt install git python3.11 python3.11-venv -y</code></pre>
 							</li>
 						</ol>
 					</div>
+
+					<div class="installation__block">
+						<h3>Step 3. Create a Telegram bot</h3>
+
+						<ol>
+							<li>
+								Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+							</li>
+
+							<li>
+								Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+								silent.
+							</li>
+
+							<li>
+								Type <code>/newbot</code>, set a name and link for the bot (for example,
+								<code>RimTUB_nickname_bot</code>).
+							</li>
+
+							<li>
+								BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+								looks like <code class="code">123456:ABC-DEF...</code>).
+							</li>
+
+							<li>
+								❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+								<code class="code">asdfjwekjdsf</code> ❗️
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 4. Configure the bot</h3>
+
+						<ol>
+							<li>
+								In terminal, navigate to the folder where you just cloned RimTUB:
+
+								<pre><code class="shell">cd RimTUB</code></pre>
+							</li>
+
+							<li>
+								Open the <code class="code">config.yaml</code> using a text editor, for example, <code
+									class="code">nano</code> :
+
+								<pre><code class="shell">nano config.yaml</code></pre>
+							</li>
+
+							<li>
+								Insert your data there. Example:
+								<pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+
+							</li>
+
+							<li>
+								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 5. Create and activate a virtual environment</h3>
+
+						<ol>
+							<li>
+								Enter the command to create a virtual environment:
+								<pre><code class="shell">python3.11 -m venv .venv</code></pre>
+							</li>
+
+							<li>
+								Activate the virtual environment with the command:
+								<pre><code class="shell">source .venv/bin/activate</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 6. Install dependencies and launch RimTUB</h3>
+
+						<ol>
+							<li>
+								Install the required dependencies with the command:
+								<pre><code class="shell">pip install -r requirements.txt</code></pre>
+							</li>
+
+							<li>
+								Launch RimTUB with the command:
+								<pre><code class="shell">python main.py</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 7. Confirm login</h3>
+
+						<ol>
+							<li>
+								After launching, the bot will ask you to enter a code.
+							</li>
+
+							<li>
+								Telegram will send you an SMS — enter this code in the console.
+							</li>
+
+							<li>
+								If you have two-factor authentication enabled (password when logging into
+								Telegram) — enter it as well. You'll only need to do this once
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<p>🎉 Done! RimTUB is working in Docker! Hooray!</p>
+					</div>
 				</details>
 
+				<details>
+					<summary><strong>macOS</strong></summary>
+
+					<div class="installation__block">
+						<h3>Step 1. Install necessary dependencies</h3>
+
+						<ol>
+							<li>
+								Open <strong>Terminal</strong>.
+							</li>
+
+							<li>
+								Enter the command to install <code class="code">Homebrew</code> (if it's not installed):
+
+								<pre><code class="shell">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+
+								Follow the instructions in the terminal to complete the installation.
+							</li>
+
+							<li>
+								Install Python 3.11 and Git through Homebrew:
+
+								<pre><code class="shell">brew install git python@3.11</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 2. Clone the RimTUB repository</h3>
+
+						<ol>
+							<li>
+								Enter the command to clone the repository:
+
+								<pre><code class="shell">git clone https://github.com/RimTUB/RimTUB</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 3. Create a Telegram bot</h3>
+
+						<ol>
+							<li>
+								Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+							</li>
+
+							<li>
+								Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+								silent.
+							</li>
+
+							<li>
+								Type <code>/newbot</code>, set a name and link for the bot (for example,
+								<code>RimTUB_nickname_bot</code>).
+							</li>
+
+							<li>
+								BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+								looks like <code class="code">123456:ABC-DEF...</code>).
+							</li>
+
+							<li>
+								❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+								<code class="code">asdfjwekjdsf</code> ❗️
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 4. Configure the bot</h3>
+
+						<ol>
+							<li>
+								In terminal, navigate to the folder where you just cloned RimTUB:
+
+								<pre><code class="shell">cd RimTUB</code></pre>
+							</li>
+
+							<li>
+								Open the <code class="code">config.yaml</code> using a text editor, for example, <code
+									class="code">nano</code> :
+
+								<pre><code class="shell">nano config.yaml</code></pre>
+							</li>
+
+							<li>
+								Insert your data there. Example:
+								<pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+
+							</li>
+
+							<li>
+								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 5. Create and activate a virtual environment</h3>
+
+						<ol>
+							<li>
+								Enter the command to create a virtual environment:
+
+								<pre><code class="shell">python3.11 -m venv .venv</code></pre>
+							</li>
+
+							<li>
+								Activate the virtual environment:
+								<pre><code class="shell">source .venv/bin/activate</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 6. Install dependencies and launch RimTUB</h3>
+
+						<ol>
+							<li>
+								Install the required dependencies with the command:
+								<pre><code class="shell">pip install -r requirements.txt</code></pre>
+							</li>
+
+							<li>
+								Launch RimTUB with the command:
+								<pre><code class="shell">python main.py</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 7. Confirm login</h3>
+
+						<ol>
+							<li>
+								After launching, the bot will ask you to enter a code.
+							</li>
+
+							<li>
+								Telegram will send you an SMS — enter this code in the console.
+							</li>
+
+							<li>
+								If you have two-factor authentication enabled (password when logging into
+								Telegram) — enter it as well. You'll only need to do this once
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<p>🎉 Done! RimTUB is working in Docker! Hooray!</p>
+					</div>
+				</details>
+
+				<details>
+					<summary><strong>UserLAnd (Android)</strong></summary>
+
+					<div class="installation__block">
+						<h3>Step 1. Install UserLAnd</h3>
+
+						<ol>
+							<li>
+								Go to <a href="https://play.google.com/store/apps/details?id=tech.ula">Play Market</a> and download
+								UserLAnd.
+							</li>
+
+							<li>
+								Install it on your device.
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 2. Download Python and RimTUB</h3>
+
+						<ol>
+							<li>
+								Open <strong>UserLAnd</strong>.
+							</li>
+
+							<li>
+								Chose <strong>Debian Termial only</strong>
+							</li>
+
+							<li>
+								In Terminal run following commands: (It will take up to 40 minutes)
+
+								<pre><code class="shell">sudo apt update && sudo apt upgrade -y
+
+sudo apt install -y wget build-essential libssl-dev zlib1g-dev \
+libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev \
+libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev \
+tk-dev uuid-dev libffi-dev
+
+cd /tmp
+wget https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
+tar -xvf Python-3.11.9.tgz
+cd Python-3.11.9
+
+./configure --enable-optimizations
+make -j$(nproc)
+sudo make altinstall
+
+sudo ln -sf /usr/local/bin/python3.11 /usr/bin/python
+sudo ln -sf /usr/local/bin/python3.11 /usr/bin/python3
+sudo ln -sf /usr/local/bin/python3.11 /usr/bin/py
+sudo ln -sf /usr/local/bin/python3.11 /usr/bin/py3
+
+py -m ensurepip
+
+sudo ln -sf /usr/local/bin/pip3.11 /usr/bin/pip
+sudo ln -sf /usr/local/bin/pip3.11 /usr/bin/pip3
+
+cd ..
+cd ..
+
+sudo apt install -y git
+sudo apt install -y nano
+
+git clone https://github.com/RimTUB/RimTUB
+
+cd RimTUB
+
+py -m venv .venv
+
+source .venv/bin/activate
+
+sudo pip install -r requirements.txt
+</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 3. Create a Telegram bot</h3>
+
+						<ol>
+							<li>
+								Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+							</li>
+
+							<li>
+								Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+								silent.
+							</li>
+
+							<li>
+								Type <code>/newbot</code>, set a name and link for the bot (for example,
+								<code>RimTUB_nickname_bot</code>).
+							</li>
+
+							<li>
+								BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+								looks like <code class="code">123456:ABC-DEF...</code>).
+							</li>
+
+							<li>
+								❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+								<code class="code">asdfjwekjdsf</code> ❗️
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 4. Configure RimTUB</h3>
+
+						<ol>
+							<li>
+								Open the <code class="code">config.yaml</code> using a text editor, for example, <code
+									class="code">nano</code> :
+
+								<pre><code class="shell">nano config.yaml</code></pre>
+							</li>
+
+							<li>
+								Insert your data there. Example:
+								<pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+
+							</li>
+
+							<li>
+								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 5. Launch RimTUB</h3>
+
+						<ol>
+							<li>
+								After all dependencies are installed, launch RimTUB:
+
+								<pre><code class="shell">python main.py</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 6. Confirm login</h3>
+
+						<ol>
+							<li>
+								After launching, the bot will ask you to enter a code.
+							</li>
+
+							<li>
+								Telegram will send you an SMS — enter this code in the console.
+							</li>
+
+							<li>
+								If you have two-factor authentication enabled (password when logging into
+								Telegram) — enter it as well. You'll only need to do this once
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<p>🎉 Done! RimTUB is working in Docker! Hooray!</p>
+					</div>
+				</details>
+
+				<details>
+					<summary><strong>Termux (Android)</strong></summary>
+
+					<div class="installation__block">
+						<h3>Step 1. Install Termux</h3>
+
+						<ol>
+							<li>Go to <a href="https://f-droid.org/packages/com.termux/">F-Droid</a> and download Termux.
+							</li>
+
+							<li>
+								Install it on your device.
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 2. Clone the RimTUB repository</h3>
+
+						<ol>
+							<li>
+								Open <strong>Termux</strong>.
+							</li>
+
+							<li>
+								Clone the RimTUB repository:
+
+								<pre>
+									<code class="shell">apt update && apt upgrade -y && apt install git -y
+										git clone https://github.com/RimTUB/RimTUB</code>
+								</pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 3. Create a Telegram bot</h3>
+
+						<ol>
+							<li>
+								Open Telegram and find user <a href="https://t.me/BotFather">@BotFather</a>.
+							</li>
+
+							<li>
+								Click <strong>Start</strong> or type <code class="code">/start</code> if the bot is
+								silent.
+							</li>
+
+							<li>
+								Type <code>/newbot</code>, set a name and link for the bot (for example,
+								<code>RimTUB_nickname_bot</code>).
+							</li>
+
+							<li>
+								BotFather will send you a long <strong>token</strong> — <strong>copy it</strong> (it
+								looks like <code class="code">123456:ABC-DEF...</code>).
+							</li>
+
+							<li>
+								❗️ Type <code class="code">/setinline</code>, select your bot, and type any text, for example
+								<code class="code">asdfjwekjdsf</code> ❗️
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 4. Configure the bot</h3>
+
+						<ol>
+							<li>
+								In terminal, navigate to the folder where you just cloned RimTUB:
+
+								<pre><code class="shell">cd RimTUB</code></pre>
+							</li>
+
+							<li>
+								Open the <code class="code">config.yaml</code> using a text editor, for example, <code
+									class="code">nano</code> :
+
+								<pre><code class="shell">nano config.yaml</code></pre>
+							</li>
+
+							<li>
+								Insert your data there. Example:
+								<pre><code class="yaml">PHONES:
+  - +12345678990 # Your phone number linked to Telegram
+  - +380XXXXXXXX # You can add multiple accounts
+
+BOT_TOKEN: 123456:ABC-DEF...  # Token provided by BotFather</code></pre>
+
+							</li>
+
+							<li>
+								To save the file in <code class="code">nano</code>, press <strong>Ctrl + S</strong> to save. Then exit
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 5. Run Termux.sh to install dependencies</h3>
+
+						<ol>
+							<li>In Termux, enter the command to execute the <code class="code">termux.sh</code> script, which will
+								install
+								all necessary dependencies:
+
+								<pre><code class="shell">bash termux.sh</code></pre>
+							</li>
+
+							<li>
+								Wait for the dependencies installation to complete.
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 6. Launch RimTUB</h3>
+
+						<ol>
+							<li>
+								After all dependencies are installed, launch RimTUB:
+
+								<pre><code class="shell">python main.py</code></pre>
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<h3>Step 7. Confirm login</h3>
+
+						<ol>
+							<li>
+								After launching, the bot will ask you to enter a code.
+							</li>
+
+							<li>
+								Telegram will send you an SMS — enter this code in the console.
+							</li>
+
+							<li>
+								If you have two-factor authentication enabled (password when logging into
+								Telegram) — enter it as well. You'll only need to do this once
+							</li>
+						</ol>
+					</div>
+
+					<div class="installation__block">
+						<p>🎉 Done! RimTUB is working in Docker! Hooray!</p>
+					</div>
+				</details>
+
+			</div>
+
+			<div class="content__block">
+				<h3>Module documentation: <a href="https://docs.rimtub.pp.ua/">docs.rimtub.pp.ua</a></h3>
+
+				<p>Here you'll find everything you need to write your own module for RimTUB:</p>
+
+				<ul>
+					<li>
+						<p><strong>Step-by-step instructions</strong> on writing and module structure.</p>
+					</li>
+
+					<li>
+						<p><strong>Complete description of available functions</strong> and methods for working with RimTUB.</p>
+					</li>
+
+					<li>
+						<p><strong>Code examples</strong> that will help you quickly start development.</p>
+					</li>
+				</ul>
+
+				<p>If you want to create your own cool modules, be sure to study the documentation. It has everything! And if
+					you
+					don't understand something, you can ask the developer for help (contacts below)</p>
+			</div>
+
+			<div class="content__block">
+				<h3>FAQ</h3>
+
+				<ul>
+					<li>
+						<b>Can I run it on my phone?</b>
+						<blockquote class="blockquote">Yes! Just install it through Termux.</blockquote>
+					</li>
+
+					<li>
+						<b>What if I can't run it on my device?</b>
+						<blockquote class="blockquote">Contact <a href="https://t.me/RimMirK">@RimMirK</a>, he can help with
+							hosting.</blockquote>
+					</li>
+
+					<li>
+						<b>Can I order a custom module?</b>Yes, also contact
+						<blockquote class="blockquote"><a href="https://t.me/RimMirK">@RimMirK</a></blockquote>
+					</li>
+
+					<li>
+						<b>I want to add a module to the website</b>
+						<blockquote class="blockquote">No problem, write to <a href="https://t.me/RimMirK">@RimMirK</a></blockquote>
+					</li>
+				</ul>
+			</div>
+
+			<div class="content__block">
+				<h3>Contacts and Links</h3>
+
+				<ul>
+					<li>
+						<b>Developer</b>:
+						<a href="https://t.me/RimMirK">@RimMirK</a>
+					</li>
+
+					<li>
+						<b>Telegram Channel</b>:
+						<a href="https://t.me/RimTUB">@RimTUB</a>
+					</li>
+
+					<li>
+						<b>Telegram Chat</b>:
+						<a href="https://t.me/RimTUB_chat">@RimTUB_chat</a>
+					</li>
+
+					<li>
+						<b>Official website</b>:
+						<a href="https://rimtub.pp.ua/">RimTUB.pp.ua</a>
+					</li>
+
+					<li>
+						<b>Documentation</b>:
+						<a href="https://t.me/RimTUB_chat">docs.RimTUB.pp.ua</a>
+					</li>
+
+					<li>
+						<b>Partner MavisHost</b>:
+						<a href="https://t.me/MavisHostNews/28">@MavisHostNews</a>
+					</li>
+				</ul>
 			</div>
 
 		</div>

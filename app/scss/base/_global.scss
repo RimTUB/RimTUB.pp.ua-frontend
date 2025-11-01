@@ -74,6 +74,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+	li::marker {
+		content: "";
+	}
 }
 
 .btn-reset {
