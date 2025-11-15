@@ -1,0 +1,7 @@
+@use '../base' as *;
+@use '../mixins' as *;
+@use '../settings' as *;
+
+.hljs-ln-n {
+	margin-right: rem(10);
+}
