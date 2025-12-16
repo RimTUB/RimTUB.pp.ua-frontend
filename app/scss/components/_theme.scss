@@ -5,6 +5,8 @@
 
 .theme {
 	@include focus;
+	
+	margin-right: rem(15);
 
 	&__icon {
 		display: none;

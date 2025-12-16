@@ -15,9 +15,11 @@ code {
 }
 
 ul {
-	@include tablet {
-		padding-left: rem(20);
-	}
+	padding-left: rem(20);
+	
+	// @include tablet {
+	// 	padding-left: rem(20);
+	// }
 
 	li::marker {
 		content: "› ";

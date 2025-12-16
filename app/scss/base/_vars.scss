@@ -6,6 +6,8 @@ $green: #2ec651;
 $accent: #008ebd;
 $accent-light: #33a8d4;
 $accent-dark: #006a91;
+$accent-1: #0b74de;
+$accent-2: #0b75de39;
 $black-05: rgba(0, 0, 0, 0.05);
 $black-10: rgba(0, 0, 0, 0.1);
 $white-10: rgba(255, 255, 255, 0.1);
@@ -32,10 +34,8 @@ $width-web: 1920; // обязательно без единицы измерен
 $width-min-web: 360; // обязательно без единицы измерения
 $height-web: 67.5rem;
 
-
-
 :root {
-	--container:  58.125rem;
+	--container: 61.25rem;
 	--container-offset: .9375rem;
 	--transition: 0.2s ease-in;
 	--transition-menu: 0.4s ease-in-out;
