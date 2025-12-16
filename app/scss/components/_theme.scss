@@ -5,7 +5,7 @@
 
 .theme {
 	@include focus;
-	
+
 	margin-right: rem(15);
 
 	&__icon {
@@ -62,7 +62,7 @@
 		border-color: $white transparent transparent transparent;
 	}
 
-	.code {
+	code {
 		background-color: color.adjust($gray-200, $lightness: -64%);
 	}
 }

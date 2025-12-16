@@ -16,7 +16,7 @@ code {
 
 ul {
 	padding-left: rem(20);
-	
+
 	// @include tablet {
 	// 	padding-left: rem(20);
 	// }
@@ -24,4 +24,12 @@ ul {
 	li::marker {
 		content: "› ";
 	}
+}
+
+a {
+	@include focus;
+}
+
+summary {
+	@include focus;
 }

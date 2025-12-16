@@ -6,3 +6,5 @@ import './components/theme.js';
 import './components/scrollBarWidth.js';
 import './components/languageRoute.js';
 import './components/highlight.js';
+
+import './libs/aos.js';

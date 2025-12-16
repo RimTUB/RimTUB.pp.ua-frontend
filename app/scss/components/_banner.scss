@@ -16,6 +16,16 @@
 	border-bottom: $border;
 	padding-block: rem(15);
 
+	&__made {
+		@include focus;
+
+		display: inline-block;
+
+		img {
+			display: block;
+		}
+	}
+
 	&__stand {
 		width: 100%;
 	}
